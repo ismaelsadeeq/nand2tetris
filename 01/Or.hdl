@@ -18,11 +18,7 @@ CHIP Or {
 	Nand(a=a, b=a, out=nota);
 	Nand(a=b, b=b, out=notb);
 	Nand(a=nota, b=notb, out=out);
-    //Other
-    //And(a=a,b=a, out=anda);
-    //Not(in=anda, out=nota);
-    //And(a=b,b=b, out=andb);
-    //Not(in=andb, out=notb);
-    //And(a=nota b=notb out=and_not_a_and_b);
-    //Not(in=and_not_a_and_b, out=out);
+    
+    //
+    
 }

@@ -14,19 +14,19 @@ CHIP Xor {
 
     PARTS:
     // Put your code here:
-	Or(a=a,b=b, out=c);
-	Nand(a=a,b=b,out=d);
-	And(a=c, b=d, out=out);
+	// Or(a=a,b=b, out=c);
+	// Nand(a=a,b=b,out=d);
+	// And(a=c, b=d, out=out);
     
     //constructing Xor using and and not gates
     
-    //And(a=a,b=a, out=anda);
-    //Not(in=anda, out=nota);
-    //And(a=b,b=b, out=andb);
-    //Not(in=andb, out=notb);
-    //And(a=nota b=notb out=and_not_a_and_b);
-    //Not(in=and_not_a_and_b, out=c);
-    //And(a=a,b=b, out=and_d);
-    //Not(in=and_d, out=d);
-    //And(a=c, b=d, out=out);
+    Not(in=a, out=notA);
+    Not(in=b, out=notB);
+    And(a=a, b=notB, out=x);
+    And(a=notA, b=b, out=y);
+    Not(in=x, out=notX);
+    Not(in=y, out=notY);
+    And(a=notX, b=notY, out=notXandnotY);
+    Not(in=notXandnotY, out=out);
+    
 }
